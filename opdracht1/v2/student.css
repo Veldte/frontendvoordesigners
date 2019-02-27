@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+
+header {
+    background-color: white;
+}
+
+header img {
+    margin-left: .5rem;
+    margin-top: 1rem;
+}
+
+body {
+    background-color: #6ac3c4;
+
+}
+
+/* Over de huizen zelf */
+
+section {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+section h2 {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.gridsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+article img {
+    height: 13rem;
+    border-bottom: 1px solid black;
+}
+
+article {
+    padding: 1.25rem;
+    background-color: white;
+    position: relative;
+    margin: auto;
+}
+
+article h3 {
+    font-size: 1.2em;
+    color: black;
+
+}
+
+details {
+    margin-left: 6rem;
+    margin-top: 4rem;
+    padding: .5rem;
+    border: 1px solid whitesmoke;
+    border-radius: 23px;
+    width: 10rem;
+    background: #6ac3c4;
+    color: whitesmoke;
+}
+
+details section {
+    margin-top: .2rem;
+}
+
+details summary {
+    text-align: center;
+}
+
+.details7[open] .content {
+    animation-name: invisiblyGrowFontSize, fadeIn;
+    animation-duration: 500ms, 200ms;
+    animation-delay: 0ms, 500ms;
+}
+
+
+/*  Button met java */
+
+.opmaak{
+  text-align: center;
+}
+button {
+    background-color:  #6ac3c4;
+    border-radius: 23px;
+    width: 10rem;
+    color: white;
+    
+
+}
+
+
+
+
+.info{
+ visibility: hidden;
+}
+
+.active {
+    margin-top: 2rem;
+    text-align: left;
+    margin: auto;
+    color: whitesmoke;
+    background-color: #6ac3c4;
+    width: 20rem;
+    padding: 1.1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    transition: .4s ease-in;
+    visibility: visible;
+}
+
+/* details tag */
