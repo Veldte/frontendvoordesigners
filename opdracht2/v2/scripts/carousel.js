@@ -19,7 +19,7 @@ nextbutton.addEventListener('click', () => {
 
     if (counter >= carouselImages.length - 1) return;
 
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    carouselSlide.style.transition = "transform 0.7s ease-in-out";
     counter++;
 
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -29,7 +29,7 @@ nextbutton.addEventListener('click', () => {
 prevbutton.addEventListener('click', () => {
 
     if (counter <= 0) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    carouselSlide.style.transition = "transform 0.7s ease-in-out";
     counter--;
 
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -51,8 +51,6 @@ carouselSlide.addEventListener('transitionend', () => {
     }
 });
 
-var kc = e.keyCode;
-if (kc == 37) nslider.prev();
-if (kc == 39) nslider.next();
+
 
 //if(counter <= 0) return;
