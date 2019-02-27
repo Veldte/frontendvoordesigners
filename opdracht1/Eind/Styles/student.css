@@ -2,6 +2,8 @@
     margin: 0;
     font-family: 'Helvetica', sans-serif;
     box-sizing: border-box;
+    font-size: 16px;
+
 }
 
 header {
@@ -86,17 +88,37 @@ details summary {
 
 /*  Button met java */
 
-.button {}
+.opmaak{
+  text-align: center;
+}
+button {
+    background-color:  #6ac3c4;
+    border-radius: 23px;
+    width: 10rem;
+    color: white;
+    
+
+}
+
+
+
+
+.info{
+ visibility: hidden;
+}
 
 .active {
     margin-top: 2rem;
-    margin-left: 8rem;
+    text-align: left;
+    margin: auto;
     color: whitesmoke;
     background-color: #6ac3c4;
-    width: 7.5rem;
+    width: 20rem;
     padding: 1.1rem;
     border: 1px solid whitesmoke;
-    border-radius: 23px;
+    border-radius: 7px;
+    transition: .4s ease-in;
+    visibility: visible;
 }
 
 /* details tag */
