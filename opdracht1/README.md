@@ -1,7 +1,12 @@
 # frontend voor designers - opdracht 1
-Hier beschrijf je de opdracht, wat je hebt gemaakt en hoe je je ontwerp door verschillende versies te testen hebt verbeterd. Bij iedere test voeg je een link toe naar de betreffende demo.
+Voor opdracht 1 heb ik de studenten huizen site gekozen. Het was de bedoeling dat ik een uitklap sectie maakte dat de studenten meer informatie geeft over de huizen.
 
-Bijvoorbeel bij de demo van versie in kun je zo een link maken, zodat iedereen de demo zelf kan uitproberen:
+In eerste instantie vond ik dit best wel pittig aangezien ik javascript moeilijk vind. De eerste week heb ik geleerd over de "details" tag. Deze werkte snel en makkelijk. Mijn tweede uitdaging die week was het stylen daarvan, dit bleek lastiger dan verwacht. 
+[Demo 1 voor opdracht 1](https://veldte.github.io/frontendvoordesigners/opdracht1/v1/)
+
+Nadat dat was gelukt ben ik door gegaan naar JavaScript. Na veel feedback over " Select All" en genoeg kleine foutjes is het mij gelukt om meerdere werkende buttons te hebben door middel van JavaScript.
+[Demo 2 voor opdracht 1](https://veldte.github.io/frontendvoordesigners/opdracht1/v2/)
+
 
 [Demo 1 voor opdracht 1](https://veldte.github.io/frontendvoordesigners/opdracht1/v1/)
 
