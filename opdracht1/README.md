@@ -12,9 +12,7 @@ Nadat dat was gelukt ben ik door gegaan naar JavaScript. Na veel feedback over "
 
 [Demo 2 voor opdracht 1](https://veldte.github.io/frontendvoordesigners/opdracht1/v2/)
 
-[Demo 3 voor opdracht 1](https://github.com/Veldte/frontendvoordesigners/opdracht1/v3/)
-
-[Demo 4 voor opdracht 1](https://github.com/Veldte/frontendvoordesigners/opdracht1/v4/)
+[Demo 3 voor eind site werkend](https://velte.github.io/frontendvoordesigners/opdracht1/Eind/)
 
 Je kan ook een link plaatsen naar de bron code van de demo:
 
