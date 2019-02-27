@@ -8,9 +8,9 @@ Versie 2:
 Nadat dat was gelukt ben ik door gegaan naar JavaScript. Na veel feedback over "Select All" en genoeg kleine foutjes is het mij gelukt om meerdere werkende buttons te hebben door middel van JavaScript.
 
 
-[Demo 1 voor opdracht 1](https://github.com/Veldte/frontendvoordesigners/opdracht1/v1/)
+[Demo 1 voor opdracht 1](https://Veldte.github.io/frontendvoordesigners/opdracht1/v1/)
 
-[Demo 2 voor opdracht 1](https://github.com/Veldte/frontendvoordesigners/opdracht1/v2/)
+[Demo 2 voor opdracht 1](https://Veldte.github.io/frontendvoordesigners/opdracht1/v2/)
 
 [Demo 3 voor opdracht 1](https://github.com/Veldte/frontendvoordesigners/opdracht1/v3/)
 
