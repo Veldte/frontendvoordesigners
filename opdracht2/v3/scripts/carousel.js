@@ -51,5 +51,32 @@ carouselSlide.addEventListener('transitionend', () => {
     }
 });
 
+window.addEventListener("keydown", checkKeyPress, false);
+
+function checkKeyPress(key) {
+    if (key.keyCode == "37") {
+
+        if (counter <= 0) return;
+        carouselSlide.style.transition = "transform 0.7s ease-in-out";
+        counter--;
+
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+        console.log('pressed');
+    }
+
+    if (key.keyCode == "39") {
+
+        if (counter >= carouselImages.length - 1) return;
+
+        carouselSlide.style.transition = "transform 0.7s ease-in-out";
+        counter++;
+
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    }
+}
+
+
 
 //if(counter <= 0) return;
