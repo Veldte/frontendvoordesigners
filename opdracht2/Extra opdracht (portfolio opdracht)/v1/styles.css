@@ -1,0 +1,33 @@
+* {
+    font-size: 16px;
+    background-color: azure;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#inleiding {
+    text-align: center;
+    margin-bottom: 7rem;
+    margin-top: 4rem;
+}
+
+.grid {
+    display: flex;
+    text-align: center;
+
+}
+
+img {
+    max-height: 25rem;
+}
+
+.column.__50 {
+    margin-top: 2rem;
+    width: 150%;
+    height: 25rem;
+    border: 2px solid grey;
+}
