@@ -42,11 +42,11 @@ window.addEventListener("keydown", checkKeyPress, false);
 
 function checkKeyPress(key) {
     if (key.keyCode == "37") {
-        next();
+        previous();
     }
 
     if (key.keyCode == "39") {
-        previous();
+        next();
     }
 };
 
