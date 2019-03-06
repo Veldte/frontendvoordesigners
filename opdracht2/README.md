@@ -19,6 +19,11 @@ Hierna ben ik gaan kijken voor het door laten sliden door middel van pijltjes to
 [Zie derde versie](https://veldte.github.io/frontendvoordesigners/opdracht2/v3/)
 
 
+De vierde versie is visueel niet anders dan de derde versie. Toch is de code anders. Ik heb de code efficienter gemaakt. Alle functies die hetzelfde doen heb ik bij elkaar gezet.
+
+[Zie vierde versie](https://veldte.github.io/frontendvoordesigners/opdracht2/v4/)
+
+
 Bronnen:
 https://www.youtube.com/watch?v=VBVOXTgXX2U
 https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
