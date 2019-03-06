@@ -22,7 +22,7 @@ nextbutton.addEventListener('click', () => {
     carouselSlide.style.transition = "transform 0.7s ease-in-out";
     counter++;
 
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'; // Ga opzij op de x as
 
 });
 
