@@ -4,7 +4,21 @@
 body{
   margin:1em;
   font: 2em/1 helvetica;
+    background-color: antiquewhite;
 }
+
+article{
+    display: inline-block;
+    text-align: center;
+}
+
+button{
+    border: 2px solid orange;
+    border-radius: 2px;
+    color: orange;
+    background-color: white;
+}
+
 span{
   color: green;
   margin: 0;

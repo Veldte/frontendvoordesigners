@@ -6,7 +6,7 @@
 //var uri = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 //var uri = "http://dennistel.nl/movies"; //online, geen https
 var uri = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 var loaderElement = document.querySelector("span");
 var section = document.querySelector('section');
 //console.log("loaderElement",loaderElement);
@@ -24,19 +24,27 @@ function showData(jsonObj) {
         //TITEL, COVER EN BESCHRIJVING
 
         var filmtitel = document.createElement('h2');
-        filmtitel.textContent = films[i].title;
+        filmtitel.textContent = films[i].title + ' - ' + ' Genre: ' + films[i].genres;
         var filmplot = document.createElement('p');
         filmplot.textContent = films[i].simple_plot;
+        //var genres = document.createElement('p');
+        //genres.textContent = films[i].genres;
         var filmcover = document.createElement('img');
         filmcover.src = films[i].cover;
         //myImg.textContent = films[i].cover;
         //console.log(filmcover.src);
+        //var filmtrailer = document.createElement('a');
+        //filmtrailer.src = films[i].trailer;
+
+
 
         //GENRES
+
         var genres = films[i].genres;
         for (var n = 0; n < genres.length; n++) {
             console.log("genre: ", genres[n]);
         } //end for genres
+
 
         //REVIEWS
         var reviewslezen = document.createElement('ul');
@@ -46,7 +54,7 @@ function showData(jsonObj) {
         var reviews = films[i].reviews;
         for (var j = 0; j < reviews.length; j++) {
             var listItem = document.createElement('li');
-            listItem.textContent = reviews[j].score + ' - ' + reviews[j].created_at + 'film ' + reviews[j].movie_id ; //zelf toegevoegd
+            listItem.textContent = 'Film cijfer ' + reviews[j].score + ' Datum van review - ' + reviews[j].created_at; //zelf toegevoegd
             reviewslezen.appendChild(listItem);
         } //end: for reviews
 
@@ -58,6 +66,8 @@ function showData(jsonObj) {
             //console.log("parentNode",this.parentNode);
             this.info.classList.toggle('show')
         } //end: reviewsheader onClick
+
+
         reviewslezen.addEventListener("click", function () {
             console.log("click this =", this);
             console.log("Wat is de parentNode?", this.parentNode); //met 'parentNode' kun je een element met een relatief pad bereiken
@@ -65,8 +75,6 @@ function showData(jsonObj) {
             var button = this.parentNode.querySelector('button'); //relatief pad gebruiken voor een actie die moet plaatsvinden
             console.log("Is dit de button?", button);
         }); //end: reviewslezen click
-
-
 
 
         //ALLE DATA KOPPELEN
@@ -84,6 +92,25 @@ function showData(jsonObj) {
 
     } //end: for films
 } //end: function showData
+
+
+window.addEventListener("keydown", checkKeyPress, false);
+
+function checkKeyPress(key) {
+
+    if (key.keyCode == "13") {
+
+        loadimagesmetXHR();
+    }
+
+    //    if (key.keyCode == "39") {
+    //        
+    //        for (var i = 0; i < films.length; i++) {
+    //            loadimagesmetXHR9(films[i]);
+    //        }
+    //    }
+};
+
 
 //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
@@ -116,7 +143,10 @@ function loadimagesmetXHR() {
 }
 //loadimagesmetXHR();
 
+
 //actie
+
+
 button.onclick = function () {
     loaderElement.classList.add('show');
     //this.classList.add('hide');
