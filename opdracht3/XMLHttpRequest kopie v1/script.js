@@ -27,6 +27,10 @@ function showData(jsonObj) {
         filmtitel.textContent = films[i].title + ' - ' + ' Genre: ' + films[i].genres;
         var filmplot = document.createElement('p');
         filmplot.textContent = films[i].simple_plot;
+
+        var release = document.createElement('p');
+        release.textContent = films[i].release_date;
+    
         //var genres = document.createElement('p');
         //genres.textContent = films[i].genres;
         var filmcover = document.createElement('img');
@@ -35,6 +39,35 @@ function showData(jsonObj) {
         //console.log(filmcover.src);
         //var filmtrailer = document.createElement('a');
         //filmtrailer.src = films[i].trailer;
+
+
+
+        //CAST
+
+        //  function showCast(jsonObj) {
+        //            var Cast = jsonObj[films[i].actors];
+        //
+        //            for (var i = 0; i < Cast.length; i++) {
+        //                var myArticle = document.createElement('article');
+        //                var myH2 = document.createElement('h2');
+        //                var myPara1 = document.createElement('p');
+        //                var myPara2 = document.createElement('p');
+        //                var myPara3 = document.createElement('p');
+        //                var myList = document.createElement('ul');
+        //
+        //                myH2.textContent = Cast[i].name;
+        //                myPara1.textContent = 'Character: ' + Cast[i].character;
+        //
+        //            }
+        //
+        //
+        //            myArticle.appendChild(myH2);
+        //            myArticle.appendChild(myPara1);
+        //            myArticle.appendChild(myPara2);
+        //            myArticle.appendChild(myPara3);
+        //            myArticle.appendChild(myList);
+        //
+        //            article.appendChild(myArticle);
 
 
 
@@ -84,6 +117,9 @@ function showData(jsonObj) {
         filmpiekijken.appendChild(filmcover);
         filmpiekijken.appendChild(reviewsbutton);
         filmpiekijken.appendChild(reviewslezen);
+        filmpiekijken.appendChild(release);
+        
+        
 
         //HTML INJECTION IN BESTAANDE SECTION
         section.appendChild(filmpiekijken);
@@ -102,93 +138,93 @@ function checkKeyPress(key) {
     if (key.keyCode == "13") {
 
         loadimagesmetXHR();
-    } 
-    
+    }
 
-        //    if (key.keyCode == "39") {
-        //        
-        //        for (var i = 0; i < films.length; i++) {
-        //            loadimagesmetXHR9(films[i]);
-        //        }
-        //    }
+
+    //    if (key.keyCode == "39") {
+    //        
+    //        for (var i = 0; i < films.length; i++) {
+    //            loadimagesmetXHR9(films[i]);
+    //        }
+    //    }
+};
+
+
+//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+function loadimagesmetXHR() {
+    var request = new XMLHttpRequest();
+    request.open('get', uri);
+    request.responseType = 'json';
+    //request.responseType = 'text'; // now we're getting a string!
+    request.send();
+
+    request.addEventListener("load", function () {
+        //console.log("request load: ",request.response);
+        loaderElement.classList.remove('show');
+        console.log("XHR data", request.response);
+        console.table(request.response);
+        showData(request.response);
+    });
+    //  request.onload = function() {
+    //      console.log("request.onload: ",request.response);
+    //    }
+    /*request.timeout = 10000; // time in milliseconds
+      request.ontimeout = function(e) {
+        // XMLHttpRequest timed out. Do something here.
+        console.log("ontimeout: " +request.timeout+", het laden duurt te lang !",e);
+      };
+      */
+    request.onerror = function () {
+        console.log('Fetch Error', request.status);
     };
+}
+//loadimagesmetXHR();
 
 
-    //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-    //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
-    function loadimagesmetXHR() {
-        var request = new XMLHttpRequest();
-        request.open('get', uri);
-        request.responseType = 'json';
-        //request.responseType = 'text'; // now we're getting a string!
-        request.send();
+//actie
 
-        request.addEventListener("load", function () {
-            //console.log("request load: ",request.response);
+
+button.onclick = function () {
+    loaderElement.classList.add('show');
+    //this.classList.add('hide');
+    //hier iets doen met de button die laadt, dan weer gewoon een button wordt ...
+
+    section.innerHTML = ""; //main leeghalen. just in case
+    loadimagesmetXHR();
+};
+
+
+
+
+
+
+function loadRestApiFetch() { //Rest Api call met Fetchs
+    console.log("function loadRestApiFetch");
+
+    loaderElement.classList.add('show');
+    fetch(uri)
+        .then(function (response) {
+            console.log(response.headers.get('Content-Type'));
+            console.log(response.headers.get('Date'));
+
+            console.log(response.status);
+            console.log(response.statusText);
+            console.log(response.type);
+            console.log(response.url);
+
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log('Request successful', myJson);
+            //eerst de loader weg halen !
             loaderElement.classList.remove('show');
-            console.log("XHR data", request.response);
-            console.table(request.response);
-            showData(request.response);
+            //dan de html renderen
+            //document.querySelector("p").innerHTML="joehoe";
+            //console.log(myJson);
+        })
+        .catch(function (error) {
+            console.log('Request failed', error)
         });
-        //  request.onload = function() {
-        //      console.log("request.onload: ",request.response);
-        //    }
-        /*request.timeout = 10000; // time in milliseconds
-          request.ontimeout = function(e) {
-            // XMLHttpRequest timed out. Do something here.
-            console.log("ontimeout: " +request.timeout+", het laden duurt te lang !",e);
-          };
-          */
-        request.onerror = function () {
-            console.log('Fetch Error', request.status);
-        };
-    }
-    //loadimagesmetXHR();
-
-
-    //actie
-
-
-    button.onclick = function () {
-        loaderElement.classList.add('show');
-        //this.classList.add('hide');
-        //hier iets doen met de button die laadt, dan weer gewoon een button wordt ...
-
-        section.innerHTML = ""; //main leeghalen. just in case
-        loadimagesmetXHR();
-    };
-
-
-
-
-
-
-    function loadRestApiFetch() { //Rest Api call met Fetchs
-        console.log("function loadRestApiFetch");
-
-        loaderElement.classList.add('show');
-        fetch(uri)
-            .then(function (response) {
-                console.log(response.headers.get('Content-Type'));
-                console.log(response.headers.get('Date'));
-
-                console.log(response.status);
-                console.log(response.statusText);
-                console.log(response.type);
-                console.log(response.url);
-
-                return response.json();
-            })
-            .then(function (myJson) {
-                console.log('Request successful', myJson);
-                //eerst de loader weg halen !
-                loaderElement.classList.remove('show');
-                //dan de html renderen
-                //document.querySelector("p").innerHTML="joehoe";
-                //console.log(myJson);
-            })
-            .catch(function (error) {
-                console.log('Request failed', error)
-            });
-    }
-    //loadRestApiFetch();
+}
+//loadRestApiFetch();
