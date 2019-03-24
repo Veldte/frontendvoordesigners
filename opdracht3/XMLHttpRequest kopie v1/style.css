@@ -5,21 +5,35 @@
 body {
     margin: 1em;
     font: 2em/1 helvetica;
-    background-color: floralwhite;
+    background-image: url(images/action-architecture-asphalt-1769413.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+
 }
 
 /* HEADER */
+
+h1 {
+    margin-top: 17rem;
+    color: white;
+}
 
 nav ul li {
     list-style-type: none;
     display: inline;
     font-size: 16px;
+    color: white;
 }
 
 #laad {
     display: flex;
     justify-content: center;
     margin: inherit;
+    width: 10rem;
+    padding: 0.2rem;
 }
 
 span {
@@ -35,10 +49,15 @@ span {
 
 /* MAIN */
 
+main {
+    z-index: 1;
+}
+
 h2 {
     font-family: 'Arial';
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
+    margin: 0;
 }
 
 
@@ -60,32 +79,47 @@ article {
 }
 
 article p {
-    font-size: .8em;
+    font-size: .6em;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 img {
-    height: 40rem;
+    height: 27rem;
     margin-bottom: 2rem;
     margin: auto;
     padding-bottom: 2rem;
 }
 
+#meer {
+    width: 15rem;
+    text-align: center;
+    font-size: .6em;
+    margin-top: 1rem;
+    color: orange;
+    background-color: white;
+    border-color: white;
+}
+
 /* REVIEWS */
 
 button {
-    width: 10rem;
+    width: 20rem;
+    padding: .5rem;
     font-size: 2rem;
     display: inline-block;
     border: 2px solid orange;
     border-radius: 20px;
-    color: orange;
-    background-color: white;
+    color: white;
+    background-color: orange;
     margin: auto;
 }
 
 .show {
     display: inline;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
 }
 
 .hide {
