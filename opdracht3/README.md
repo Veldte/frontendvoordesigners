@@ -7,8 +7,8 @@ deze uri kun je gebruiken voor een van de use case voor opdracht 3.
 De JSON data is ook los, per film of genre of actors te gebruiken. Check die [hier](https://github.com/KoopReynders/frontendvoordesigners/tree/master/opdracht3/json).
 
 
-[Zie eerste versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpRequest kopie v1/)
+[Zie eerste versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpRequestkopiev1/)
 
-[Zie tweede versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpRequest kopie v2/)
+[Zie tweede versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpRequestkopiev2/)
 
 inspiratiebron: https://mathiasbynens.be/notes/html5-details-jquery#comment-35
