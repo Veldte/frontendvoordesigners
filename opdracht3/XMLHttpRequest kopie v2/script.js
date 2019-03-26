@@ -91,13 +91,26 @@ function showMovies(jsonObj) {
         } //end: for reviews
 
 
+        
+        // Actors
+        
+        var actorzien = document.createElement('details');
+        actorzien.innerHTML = '<summary>Rollen</summary>';
+        //reviewslezen.appendChild(reviewsheader);
+        var actor = films[i].actors;
+        for (var j = 0; j < actor.length; j++) {
+            var cast = document.createElement('li');
+            cast.textContent = 'Speler: ' + actor[j].actor_name+ ' , Personage: ' + actor[j].character; //zelf toegevoegd
+            actorzien.appendChild(cast);
+        } //end: for reviews
 
         //ALLE DATA KOPPELEN
         filmpiekijken.appendChild(filmtitel);
         filmpiekijken.appendChild(filmplot);
         filmpiekijken.appendChild(filmcover);
-        filmpiekijken.appendChild(reviewslezen);
         filmpiekijken.appendChild(release);
+        filmpiekijken.appendChild(reviewslezen);
+        filmpiekijken.appendChild(actorzien);
 
 
 
