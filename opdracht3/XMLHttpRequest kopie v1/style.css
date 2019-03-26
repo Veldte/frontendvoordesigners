@@ -16,10 +16,16 @@ body {
 
 /* HEADER */
 
+header{
+    padding-left: 1rem;
+}
+
 h1 {
     margin-top: 17rem;
     color: white;
+    
 }
+
 
 nav ul li {
     list-style-type: none;
@@ -28,11 +34,24 @@ nav ul li {
     color: white;
 }
 
+nav li{
+    margin-left: 1rem;
+}
+nav li:hover{
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+
+#li1{
+    margin: 0;
+    padding: 0;
+}
+
 #laad {
     display: flex;
     justify-content: center;
     margin: inherit;
-    width: 10rem;
+    width: 15rem;
     padding: 0.2rem;
 }
 
@@ -93,7 +112,7 @@ img {
 }
 
 #meer {
-    width: 15rem;
+    width: 12rem;
     text-align: center;
     font-size: .6em;
     margin-top: 1rem;
@@ -101,6 +120,7 @@ img {
     background-color: white;
     border-color: white;
     margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 /* REVIEWS */

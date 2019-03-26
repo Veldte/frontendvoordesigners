@@ -111,6 +111,8 @@ function showData(jsonObj) {
         }); //end: reviewslezen click
 
 
+            
+        
         //ALLE DATA KOPPELEN
         filmpiekijken.appendChild(filmtitel);
         filmpiekijken.appendChild(filmplot);
@@ -120,12 +122,14 @@ function showData(jsonObj) {
         filmpiekijken.appendChild(release);
         
         
+        
 
         //HTML INJECTION IN BESTAANDE SECTION
         section.appendChild(filmpiekijken);
 
 
 
+        
 
     } //end: for films
 } //end: function showData
@@ -141,17 +145,12 @@ function checkKeyPress(key) {
     }
 
 
-    //    if (key.keyCode == "39") {
-    //        
-    //        for (var i = 0; i < films.length; i++) {
-    //            loadimagesmetXHR9(films[i]);
-    //        }
-    //    }
 };
 
 
 //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 //https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+
 function loadimagesmetXHR() {
     var request = new XMLHttpRequest();
     request.open('get', uri);
@@ -199,32 +198,3 @@ button.onclick = function () {
 
 
 
-function loadRestApiFetch() { //Rest Api call met Fetchs
-    console.log("function loadRestApiFetch");
-
-    loaderElement.classList.add('show');
-    fetch(uri)
-        .then(function (response) {
-            console.log(response.headers.get('Content-Type'));
-            console.log(response.headers.get('Date'));
-
-            console.log(response.status);
-            console.log(response.statusText);
-            console.log(response.type);
-            console.log(response.url);
-
-            return response.json();
-        })
-        .then(function (myJson) {
-            console.log('Request successful', myJson);
-            //eerst de loader weg halen !
-            loaderElement.classList.remove('show');
-            //dan de html renderen
-            //document.querySelector("p").innerHTML="joehoe";
-            //console.log(myJson);
-        })
-        .catch(function (error) {
-            console.log('Request failed', error)
-        });
-}
-//loadRestApiFetch();
