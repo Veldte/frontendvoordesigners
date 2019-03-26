@@ -42,35 +42,6 @@ function showMovies(jsonObj) {
 
 
 
-        //CAST
-
-        //  function showCast(jsonObj) {
-        //            var Cast = jsonObj[films[i].actors];
-        //
-        //            for (var i = 0; i < Cast.length; i++) {
-        //                var myArticle = document.createElement('article');
-        //                var myH2 = document.createElement('h2');
-        //                var myPara1 = document.createElement('p');
-        //                var myPara2 = document.createElement('p');
-        //                var myPara3 = document.createElement('p');
-        //                var myList = document.createElement('ul');
-        //
-        //                myH2.textContent = Cast[i].name;
-        //                myPara1.textContent = 'Character: ' + Cast[i].character;
-        //
-        //            }
-        //
-        //
-        //            myArticle.appendChild(myH2);
-        //            myArticle.appendChild(myPara1);
-        //            myArticle.appendChild(myPara2);
-        //            myArticle.appendChild(myPara3);
-        //            myArticle.appendChild(myList);
-        //
-        //            article.appendChild(myArticle);
-
-
-
         //GENRES
 
         var genres = films[i].genres;
