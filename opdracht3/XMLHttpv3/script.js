@@ -5,7 +5,7 @@
 //var uri = "https://open.data.amsterdam.nl/Activiteiten.json";
 //var uri = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 //var uri = "http://dennistel.nl/movies"; //online, geen https
-var uri = 'https://KoopReynders.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
+var uri = 'https://veldte.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
 var button = document.querySelector('button');
 var loaderElement = document.querySelector("span");
 var section = document.querySelector('section');
