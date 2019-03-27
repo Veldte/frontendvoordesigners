@@ -40,15 +40,6 @@ function showMovies(jsonObj) {
         //filmtrailer.src = films[i].trailer;
 
 
-
-        //GENRES
-
-        var genres = films[i].genres;
-        for (var n = 0; n < genres.length; n++) {
-            console.log("genre: ", genres[n]);
-        } //end for genres
-
-
         //REVIEWS
         var reviewslezen = document.createElement('details');
         reviewslezen.innerHTML = '<summary>Lees Reviews</summary>';
@@ -62,7 +53,7 @@ function showMovies(jsonObj) {
 
 
 
-        // Actors
+        // Actors toevoegen
 
         var actorzien = document.createElement('details');
         actorzien.innerHTML = '<summary>Rollen</summary>';
@@ -74,6 +65,20 @@ function showMovies(jsonObj) {
             actorzien.appendChild(cast);
         } //end: for reviews
 
+
+        // Directors toevoegen
+
+        var Directorzien = document.createElement('details');
+        Directorzien.innerHTML = '<summary>Director</summary>';
+        //reviewslezen.appendChild(reviewsheader);
+        var director = films[i].directors;
+        for (var j = 0; j < director.length; j++) {
+            var regie = document.createElement('li');
+            regie.textContent = 'Director of this movie: ' + director[j].name; //zelf toegevoegd
+            Directorzien.appendChild(regie);
+        } //end: for reviews
+
+
         //ALLE DATA KOPPELEN
         filmpiekijken.appendChild(filmtitel);
         filmpiekijken.appendChild(filmcover);
@@ -81,7 +86,7 @@ function showMovies(jsonObj) {
         filmpiekijken.appendChild(release);
         filmpiekijken.appendChild(reviewslezen);
         filmpiekijken.appendChild(actorzien);
-
+        filmpiekijken.appendChild(Directorzien);
 
 
 
@@ -96,6 +101,8 @@ function showMovies(jsonObj) {
 } //end: function showData
 
 
+
+
 window.addEventListener("keydown", checkKeyPress, false);
 
 function checkKeyPress(key) {
@@ -103,6 +110,11 @@ function checkKeyPress(key) {
     if (key.keyCode == "13") {
 
         loadimagesmetXHR();
+    }
+    
+     if (key.keyCode == "39") {
+
+         
     }
 
 
@@ -153,3 +165,7 @@ button.onclick = function () {
     section.innerHTML = ""; //main leeghalen. just in case
     loadimagesmetXHR();
 };
+
+
+
+

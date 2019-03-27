@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1em;
+    font: 2em/1 helvetica;
+    background-image: url(images/action-architecture-asphalt-1769413.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+/* HEADER */
+
+header {
+    padding-left: 1rem;
+}
+
+h1 {
+    margin-top: 17rem;
+    color: white;
+
+}
+
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    font-size: 16px;
+    color: white;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav li:hover {
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+
+#li1 {
+    margin: 0;
+    padding: 0;
+}
+
+#laad {
+    display: inline-block;
+    justify-content: center;
+    margin: inherit;
+    width: 15rem;
+    padding: 0.2rem;
+    font-size: 2rem;
+    border: 2px solid orange;
+    border-radius: 20px;
+    color: white;
+    background-color: orange;
+}
+
+span {
+    color: green;
+    margin: 0;
+    padding: 1em;
+    width: calc(6 * 450px);
+    list-style-position: inside;
+    background: DARKSEAGREEN;
+    transition: all 1s ease;
+    display: none;
+}
+
+/* MAIN */
+
+details summary {
+    margin: auto;
+    text-align: center;
+    background-color: orange;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+
+
+}
+
+
+details {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+details:nth-child(2n) summary {
+    color: white;
+    list-style-type: none;
+}
+
+
+
+main {
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Arial';
+    font-size: 1.3em;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+article {
+    display: grid;
+    border: 2px solid orange;
+    margin-top: 3em;
+    padding: 1em;
+    width: 40rem;
+    background-color: white;
+}
+
+article p {
+    font-size: .6em;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+img {
+    height: 27rem;
+    margin-bottom: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: .1rem;
+    border-top: 2px solid orange;
+    box-shadow: 0 8px 6px -2px gray;
+}
+
+#meer {
+    width: 12rem;
+    text-align: center;
+    font-size: .6em;
+    margin-top: 1rem;
+    color: orange;
+    background-color: white;
+    border-color: white;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 20px;
+}
+
+p:nth-of-type(2n) {
+    color: orange;
+}
+
+/* REVIEWS */
+
+.show {
+    display: inline;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+}
+
+.hide {
+    display: none;
+}
+
+/* ************* */
+
+section ul {
+    display: none;
+    padding-top: .8rem;
+    background-color: none;
+    font-size: .5em;
+    list-style-type: decimal;
+}

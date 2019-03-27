@@ -78,10 +78,10 @@ details summary {
     margin: auto;
     text-align: center;
     background-color: orange;
-    width: 20rem;
+    width: 15rem;
     padding: 1rem;
     border-radius: 5rem;
-    font-size: 2em;
+    font-size: 1.2em;
     margin-bottom: 1rem;
 
 
@@ -98,6 +98,7 @@ details:nth-child(2n) summary {
     color: white;
     list-style-type: none;
 }
+
 
 
 main {
