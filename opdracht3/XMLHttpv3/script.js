@@ -24,7 +24,9 @@ function showMovies(jsonObj) {
         //TITEL, COVER EN BESCHRIJVING
 
         var filmtitel = document.createElement('h2');
-        filmtitel.textContent = films[i].title + ' - ' + ' Genre: ' + films[i].genres;
+        filmtitel.textContent = films[i].title;
+        var genre = document.createElement('h3');
+        genre.textContent = 'Genre: ' + films[i].genres;
         var filmplot = document.createElement('p');
         filmplot.textContent = films[i].simple_plot;
         var release = document.createElement('p');
@@ -93,6 +95,7 @@ function showMovies(jsonObj) {
 
         //ALLE DATA KOPPELEN
         filmpiekijken.appendChild(filmtitel);
+        filmpiekijken.appendChild(genre);
         filmpiekijken.appendChild(filmcover);
         filmpiekijken.appendChild(filmplot);
         filmpiekijken.appendChild(release);

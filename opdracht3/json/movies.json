@@ -83,76 +83,76 @@
     },
     {
         "id": 2,
-        "title": "The Shawshank Redemption",
-        "plot": "Andy Dufresne is a young and successful banker whose life changes drastically when he is convicted and sentenced to life imprisonment for the murder of his wife and her lover. Set in the 1940's, the film shows how Andy, with the help of his friend Red, the prison entrepreneur, turns out to be a most unconventional prisoner. Written by Martin Lewison",
-        "simple_plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-        "release_date": "14 October 1994",
-        "cover": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-        "trailer": "https://video-http.media-imdb.com/MV5BODlhNjU1YjQtOTQyOS00MmY2LWFlZTgtODg1ZjY1N2NjNDMyXkExMV5BbXA0XkFpbWRiLWV0cy10cmFuc2NvZGU@.mp4?Expires=1545339652&Signature=Wt5L9C0~HZ~AQLF5H~D7BAxCOPBQaNxIqxIICEF5apExwauB07M5vax10pne~ZneUA6y6WAWb3Q5djYRKkQ6xTJDSWvJCNeDx8D4fwP3GoUxaADkMPVbsBT2WynXsm8opgvAeL4aLQ14PQ92d5rLSQKPuInpvhbn6LEA5o8dvBE_&Key-Pair-Id=APKAILW5I44IHKUN2DYA",
-        "genres": ["Crime", "Drama"],
+        "title": "Pompeii",
+        "plot": " A slave-turned-gladiator finds himself in a race against time to save his true love, who has been betrothed to a corrupt Roman Senator. As Mount Vesuvius erupts, he must fight to save his beloved as Pompeii crumbles around him.",
+        "simple_plot": " A slave-turned-gladiator finds himself in a race against time to save his true love, who has been betrothed to a corrupt Roman Senator. As Mount Vesuvius erupts, he must fight to save his beloved as Pompeii crumbles around him.",
+        "release_date": "20 februari 2014",
+        "cover": "https://www.moviemeter.nl/images/cover/87000/87778.jpg?cb=1407270521",
+        "trailer": "https://www.youtube.com/watch?v=t6TRwfxDICM",
+        "genres": ["Action", "Drama"],
         "reviews": [{
             "id": 5,
             "score": 9,
             "movie_id": 2,
-            "created_at": "2013-09-18T16:09:50.000Z",
-            "updated_at": "2013-09-18T16:09:50.000Z",
-            "review_text": null
+            "created_at": "2014-09-18T16:09:50.000Z",
+            "updated_at": "2014-09-18T16:09:50.000Z",
+            "review_text": "Amazing!!"
         }, {
             "id": 6,
             "score": 9,
             "movie_id": 2,
-            "created_at": "2013-09-18T16:09:50.000Z",
-            "updated_at": "2013-09-18T16:09:50.000Z",
+            "created_at": "2015-09-18T16:09:50.000Z",
+            "updated_at": "2015-09-18T16:09:50.000Z",
             "review_text": null
         }, {
             "id": 7,
             "score": 10,
             "movie_id": 2,
-            "created_at": "2013-09-18T16:09:50.000Z",
-            "updated_at": "2013-09-18T16:09:50.000Z",
+            "created_at": "2017-09-18T16:09:50.000Z",
+            "updated_at": "2017-09-18T16:09:50.000Z",
             "review_text": null
         }, {
             "id": 8,
             "score": 10,
             "movie_id": 2,
-            "created_at": "2013-09-18T16:09:50.000Z",
-            "updated_at": "2013-09-18T16:09:50.000Z",
+            "created_at": "2016-09-18T16:09:50.000Z",
+            "updated_at": "2016-09-18T16:09:50.000Z",
             "review_text": null
         }],
         "directors": [{
             "id": 4,
-            "name": "Frank Darabont",
+            "name": "Paul W. S. Anderson",
             "movie_id": 2
         }],
         "actors": [{
             "id": 10,
-            "actor_name": "Tim Robbins",
+            "actor_name": "Kit Harinton",
             "movie_id": 2,
-            "character": "Andy Dufresne",
+            "character": "Young Milo",
             "url_character": "http://www.imdb.com/character/ch0001388",
             "url_photo": "http://ia.media-imdb.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_SY44_CR1,0,32,44_AL_.jpg",
             "url_profile": "http://www.imdb.com/name/nm0000209"
         }, {
             "id": 11,
-            "actor_name": "Morgan Freeman",
+            "actor_name": "Emily Browning",
             "movie_id": 2,
-            "character": "Ellis Boyd 'Red' Redding",
+            "character": "Cassia",
             "url_character": "http://www.imdb.com/character/ch0001387",
             "url_photo": "http://ia.media-imdb.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_SX32_CR0,0,32,44_AL_.jpg",
             "url_profile": "http://www.imdb.com/name/nm0000151"
         }, {
             "id": 12,
-            "actor_name": "Bob Gunton",
+            "actor_name": "Kiefer Sutherland",
             "movie_id": 2,
-            "character": "Warden Norton",
+            "character": "Corvus",
             "url_character": "http://www.imdb.com/character/ch0001391",
             "url_photo": "http://ia.media-imdb.com/images/M/MV5BMTc3MzY0MTQzM15BMl5BanBnXkFtZTcwMTM0ODYxNw@@._V1_SY44_CR11,0,32,44_AL_.jpg",
             "url_profile": "http://www.imdb.com/name/nm0348409"
         }, {
             "id": 13,
-            "actor_name": "William Sadler",
+            "actor_name": "Adewale Akinnuoye",
             "movie_id": 2,
-            "character": "Heywood",
+            "character": "Atticus",
             "url_character": "http://www.imdb.com/character/ch0001390",
             "url_photo": "http://ia.media-imdb.com/images/M/MV5BMTA1NjU3NDg1MTheQTJeQWpwZ15BbWU2MDI4OTcxMw@@._V1_SY44_CR2,0,32,44_AL_.jpg",
             "url_profile": "http://www.imdb.com/name/nm0006669"

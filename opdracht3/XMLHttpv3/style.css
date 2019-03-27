@@ -1,5 +1,26 @@
 * {
     box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'Kiona-Regular';
+    src: url(fonts/Kiona-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Kiona-Itallic';
+    src: url(fonts/Kiona-Itallic.ttf);
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url(fonts/LemonMilk.otf);
+}
+
+@font-face {
+    font-family: 'TheLightFont';
+    src: url(fonts/TheLightFont.otf);
 }
 
 body {
@@ -14,7 +35,7 @@ body {
 
 }
 
-/* HEADER */
+/* --- HEADER --- */
 
 header {
     padding-left: 1rem;
@@ -23,15 +44,20 @@ header {
 h1 {
     margin-top: 17rem;
     color: white;
+    font-family: 'LemonMilk';
 
 }
 
+nav {
+    font-family: 'LemonMilk';
+}
 
 nav ul li {
     list-style-type: none;
     display: inline;
     font-size: 16px;
     color: white;
+
 }
 
 nav li {
@@ -72,7 +98,9 @@ span {
     display: none;
 }
 
-/* MAIN */
+/* --- MAIN --- */
+
+/* Butons */
 
 details summary {
     margin: auto;
@@ -100,17 +128,28 @@ details:nth-child(2n) summary {
 }
 
 
+/* Tekst */
 
 main {
     z-index: 1;
 }
 
 h2 {
-    font-family: 'Arial';
+    font-family: 'Kiona-Regular';
+    /*font-family: 'Arial';*/
     font-size: 1.3em;
     text-align: center;
     margin: 0;
 }
+
+h3 {
+    font-family: 'Kiona-Itallic';
+    font-size: 22px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
 
 
 
@@ -137,15 +176,7 @@ article p {
     padding-right: 1rem;
 }
 
-img {
-    height: 27rem;
-    margin-bottom: 2rem;
-    margin: auto;
-    margin-top: 2rem;
-    padding-top: .1rem;
-    border-top: 2px solid orange;
-    box-shadow: 0 8px 6px -2px gray;
-}
+
 
 #meer {
     width: 12rem;
@@ -162,9 +193,24 @@ img {
 
 p:nth-of-type(2n) {
     color: orange;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid orange;
 }
 
-/* REVIEWS */
+/* Images */
+
+img {
+    height: 27rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: .1rem;
+    border-top: 2px solid orange;
+    box-shadow: 0 8px 6px -2px gray;
+}
+
+
+/* --- REVIEWS --- */
 
 .show {
     display: inline;
