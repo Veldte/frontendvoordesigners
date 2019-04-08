@@ -145,8 +145,6 @@ function loadimagesmetXHR() {
 }
 
 
-
-
 //actie
 
 button.onclick = function () {

@@ -22,3 +22,5 @@ Voor de derde versie ben ik nog verder gegaan in het eigen maken van de code. Ik
 [Zie derde versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpv3/)
 
 inspiratiebron: https://mathiasbynens.be/notes/html5-details-jquery#comment-35
+
+[Zie vierde versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpv4/)
