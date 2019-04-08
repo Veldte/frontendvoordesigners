@@ -58,10 +58,12 @@ nav ul li {
     font-size: 16px;
     color: white;
 
+
 }
 
 nav li {
-    margin-left: 1rem;
+    padding-right: 1rem;
+   
 }
 
 nav li:hover {
@@ -69,10 +71,6 @@ nav li:hover {
     color: orange;
 }
 
-#li1 {
-    margin: 0;
-    padding: 0;
-}
 
 #laad {
     display: inline-block;
@@ -197,6 +195,7 @@ p:nth-of-type(2n) {
     color: orange;
     padding-bottom: 1rem;
     border-bottom: 2px solid orange;
+    font-size: 1.2rem;
 }
 
 /* Images */
@@ -232,4 +231,127 @@ section ul {
     background-color: none;
     font-size: .5em;
     list-style-type: decimal;
+}
+
+
+#loader {
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    margin-top: 3rem;
+    margin-left: 30rem;
+    transition: all 4s ease;
+
+}
+
+
+
+@media (max-width: 81rem) {
+
+    main section {
+        grid-template-columns: repeat( 2, minmax(250px, 1fr));
+
+
+    }
+
+    article {
+        width: 30rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    img {
+        height: 20rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+
+}
+
+@media (max-width: 70rem) {
+
+    main section {
+        grid-template-columns: repeat( 1, minmax(250px, 1fr));
+        align-content: center;
+
+    }
+
+    article {
+        width: 40rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+
+    img {
+        height: 30rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    article p {
+        font-size: 1.2rem;
+    }
+
+
+
+
+}
+
+@media (max-width: 51rem) {
+
+    article{
+        width: 27rem;
+    }
+
+}
+
+@media (max-width: 25rem) {
+   
+    main{
+        margin: 0rem;
+        padding: 0rem;
+    }
+    
+    header{
+        margin-left: 0rem;
+    }
+    nav{
+        margin: auto;
+        
+    }
+    
+    article{
+        width: 24.5rem;
+    }
+    
+    article img{
+        height: 20rem;
+        margin-top: 0rem;
+    }
+    
+    article p{
+        font-size: 1rem;
+    }
+    
+    h3{
+        font-size: 1.4rem;
+    }
+
 }

@@ -5,7 +5,7 @@
 //var uri = "https://open.data.amsterdam.nl/Activiteiten.json";
 //var uri = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 //var uri = "http://dennistel.nl/movies"; //online, geen https
-var uri = 'https://veldte.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
+var requesturl = 'https://veldte.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
 var button = document.querySelector('button');
 var loaderElement = document.querySelector("span");
 var section = document.querySelector('section');
@@ -31,9 +31,6 @@ function showMovies(jsonObj) {
         filmplot.textContent = films[i].simple_plot;
         var release = document.createElement('p');
         release.textContent = films[i].release_date;
-
-        //var genres = document.createElement('p');
-        //genres.textContent = films[i].genres;
         var filmcover = document.createElement('img');
         filmcover.src = films[i].cover;
         //myImg.textContent = films[i].cover;
@@ -80,17 +77,17 @@ function showMovies(jsonObj) {
             Directorzien.appendChild(regie);
         } //end: for reviews
 
-        
-//         // Trailer toevoegen
-//
-//        var Trailerzien = document.createElement('details');
-//        Trailerzien.innerHTML = '<summary>Bekijk trailer</summary>';
-//        var clips = films[i].trailer;
-//        for (var j = 0; j < clips.length; j++) {
-//            var video = document.createElement('li');
-//            video.textContent = 'Click for video: ' + clips[j].trailer; //zelf toegevoegd
-//            Trailerzien.appendChild(video);
-//        } //end: for reviews
+
+        //         // Trailer toevoegen
+        //
+        //        var Trailerzien = document.createElement('details');
+        //        Trailerzien.innerHTML = '<summary>Bekijk trailer</summary>';
+        //        var clips = films[i].trailer;
+        //        for (var j = 0; j < clips.length; j++) {
+        //            var video = document.createElement('li');
+        //            video.textContent = 'Click for video: ' + clips[j].trailer; //zelf toegevoegd
+        //            Trailerzien.appendChild(video);
+        //        } //end: for reviews
 
 
         //ALLE DATA KOPPELEN
@@ -102,7 +99,7 @@ function showMovies(jsonObj) {
         filmpiekijken.appendChild(reviewslezen);
         filmpiekijken.appendChild(actorzien);
         filmpiekijken.appendChild(Directorzien);
-//        filmpiekijken.appendChild(Trailerzien);
+        //        filmpiekijken.appendChild(Trailerzien);
 
 
 
@@ -124,54 +121,33 @@ window.addEventListener("keydown", checkKeyPress, false);
 function checkKeyPress(key) {
 
     if (key.keyCode == "13") {
-
+        loaderElement.classList.add('show');
         loadimagesmetXHR();
     }
-    
-     if (key.keyCode == "39") {
-
-         
-    }
-
-
 };
-
-
-//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 
 function loadimagesmetXHR() {
     var request = new XMLHttpRequest();
-    request.open('get', uri);
+    request.open('get', requesturl);
     request.responseType = 'json';
-    //request.responseType = 'text'; // now we're getting a string!
     request.send();
 
     request.addEventListener("load", function () {
-        //console.log("request load: ",request.response);
         loaderElement.classList.remove('show');
         console.log("XHR data", request.response);
         console.table(request.response);
         showMovies(request.response);
     });
-    //  request.onload = function() {
-    //      console.log("request.onload: ",request.response);
-    //    }
-    /*request.timeout = 10000; // time in milliseconds
-      request.ontimeout = function(e) {
-        // XMLHttpRequest timed out. Do something here.
-        console.log("ontimeout: " +request.timeout+", het laden duurt te lang !",e);
-      };
-      */
+  
     request.onerror = function () {
         console.log('Fetch Error', request.status);
     };
 }
-//loadimagesmetXHR();
+
+
 
 
 //actie
-
 
 button.onclick = function () {
     loaderElement.classList.add('show');
@@ -182,6 +158,79 @@ button.onclick = function () {
     loadimagesmetXHR();
 };
 
+// POGING ALLEEN GENRE
+
+//genre functie
+
+//function showHorror(jsonObj) {
+//    var films = jsonObj;
+//
+//    if (films[i].genre == "Horror"){
+//        
+//        var filmpiekijken = document.createElement('article');
+//
+//        //TITEL, COVER EN BESCHRIJVING
+//
+//        var filmtitel = document.createElement('h2');
+//        filmtitel.textContent = films[i].title;
+//        var genre = document.createElement('h3');
+//        genre.textContent = 'Genre: ' + films[i].genres;
+//        var filmplot = document.createElement('p');
+//        filmplot.textContent = films[i].simple_plot;
+//        var release = document.createElement('p');
+//        release.textContent = films[i].release_date;
+//        var filmcover = document.createElement('img');
+//        filmcover.src = films[i].cover;
+//        
+//        
+//        //ALLE DATA KOPPELEN
+//        filmpiekijken.appendChild(filmtitel);
+//        filmpiekijken.appendChild(genre);
+//        filmpiekijken.appendChild(filmcover);
+//        filmpiekijken.appendChild(filmplot);
+//        filmpiekijken.appendChild(release);
+//        filmpiekijken.appendChild(reviewslezen);
+//        filmpiekijken.appendChild(actorzien);
+//        filmpiekijken.appendChild(Directorzien);
+//        //film
+//        
+//        
+//    
+//    } //end: for films
+//} //end: function showData
+//
+//
+////genre button
+//function loadgenremetXHR() {
+//    var request = new XMLHttpRequest();
+//    request.open('get', requesturl);
+//    request.responseType = 'json';
+//    request.send();
+//
+//    request.addEventListener("load", function () {
+//        loaderElement.classList.remove('show');
+//        console.log("XHR data", request.response);
+//        console.table(request.response);
+//        showHorror(request.response);
+//    });
+//  
+//    request.onerror = function () {
+//        console.log('Fetch Error', request.status);
+//    };
+//}
+//
+//
+//document.getElementById("meer").onclick = function(){
+//    section.innerHTML = "";
+//    loadgenremetXHR();
+//}
 
 
 
+//var actiebutton = document.getElementById("actiefilm");
+//
+//actiebutton.onclick = function{
+//    if(films[i].genres == "Adventure"){
+//        loadimagesmetXHR(this); 
+//    }
+//}
