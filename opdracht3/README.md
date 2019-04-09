@@ -1,10 +1,6 @@
-# frontend voor designers - opdracht 3
+# Eva Veldt - frontend voor designers - opdracht 3 " Lekker films klikken" 
 
-JSON van de movies data staat ook hier:
-deze uri kun je gebruiken voor een van de use case voor opdracht 3.
-[https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json](https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json)
-
-De JSON data is ook los, per film of genre of actors te gebruiken. Check die [hier](https://github.com/KoopReynders/frontendvoordesigners/tree/master/opdracht3/json).
+De iteraties van mijn opdracht 3:
 
 
 Voor de eerste versie heb ik geprobeerd om de index en de aangemaakte elementen via Json te stylen en een mooie plaatsing te geven. Ook heb ik ervoor gezorgd dat de films laden on keypress van de enter button.
