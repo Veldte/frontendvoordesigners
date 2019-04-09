@@ -114,17 +114,33 @@ function showMovies(jsonObj) {
 } //end: function showData
 
 
-
-
 window.addEventListener("keydown", checkKeyPress, false);
-
 function checkKeyPress(key) {
 
     if (key.keyCode == "13") {
         loaderElement.classList.add('show');
         loadimagesmetXHR();
     }
+
 };
+
+window.addEventListener("keydown", BodyKeyPress, false);
+var body = document.querySelector('body');
+
+function BodyKeyPress(key){
+    
+if (key.keyCode == "73") {
+
+    body.classList.add("bodychange");
+
+} 
+
+else {
+    body.classList.remove("bodychange");
+}
+
+};
+
 
 function loadimagesmetXHR() {
     var request = new XMLHttpRequest();
@@ -138,7 +154,7 @@ function loadimagesmetXHR() {
         console.table(request.response);
         showMovies(request.response);
     });
-  
+
     request.onerror = function () {
         console.log('Fetch Error', request.status);
     };
@@ -156,72 +172,30 @@ button.onclick = function () {
     loadimagesmetXHR();
 };
 
-// POGING ALLEEN GENRE
 
-//genre functie
 
-//function showHorror(jsonObj) {
-//    var films = jsonObj;
+
+
+
+
+//// POGING ALLEEN GENRE
 //
-//    if (films[i].genre == "Horror"){
-//        
-//        var filmpiekijken = document.createElement('article');
+//var HorrorButton = document.getElementById('Horror');
 //
-//        //TITEL, COVER EN BESCHRIJVING
+//HorrorButton.addEventListener("click", function ()) {
 //
-//        var filmtitel = document.createElement('h2');
-//        filmtitel.textContent = films[i].title;
-//        var genre = document.createElement('h3');
-//        genre.textContent = 'Genre: ' + films[i].genres;
-//        var filmplot = document.createElement('p');
-//        filmplot.textContent = films[i].simple_plot;
-//        var release = document.createElement('p');
-//        release.textContent = films[i].release_date;
-//        var filmcover = document.createElement('img');
-//        filmcover.src = films[i].cover;
-//        
-//        
-//        //ALLE DATA KOPPELEN
-//        filmpiekijken.appendChild(filmtitel);
-//        filmpiekijken.appendChild(genre);
-//        filmpiekijken.appendChild(filmcover);
-//        filmpiekijken.appendChild(filmplot);
-//        filmpiekijken.appendChild(release);
-//        filmpiekijken.appendChild(reviewslezen);
-//        filmpiekijken.appendChild(actorzien);
-//        filmpiekijken.appendChild(Directorzien);
-//        //film
-//        
-//        
-//    
-//    } //end: for films
-//} //end: function showData
+//    if (json.genres[0] == "Horror" || json.genres[1] == " Horror") {
 //
+//        return this ;
 //
-////genre button
-//function loadgenremetXHR() {
-//    var request = new XMLHttpRequest();
-//    request.open('get', requesturl);
-//    request.responseType = 'json';
-//    request.send();
-//
-//    request.addEventListener("load", function () {
-//        loaderElement.classList.remove('show');
-//        console.log("XHR data", request.response);
-//        console.table(request.response);
-//        showHorror(request.response);
-//    });
-//  
-//    request.onerror = function () {
-//        console.log('Fetch Error', request.status);
-//    };
+//    }
 //}
-//
-//
-//document.getElementById("meer").onclick = function(){
-//    section.innerHTML = "";
-//    loadgenremetXHR();
-//}
+
+
+
+
+
+
 
 
 

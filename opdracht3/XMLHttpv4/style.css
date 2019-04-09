@@ -34,6 +34,16 @@ body {
 
 }
 
+.bodychange {
+    
+    font: 2em/1 helvetica;
+    background-image: url(images/vuurwerk.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
 /* --- HEADER --- */
 
 header {
@@ -185,10 +195,24 @@ article p {
     margin-top: 1rem;
     color: orange;
     background-color: white;
-    border-color: white;
+    border: 2px solid orange;;
     margin-bottom: 1rem;
     margin-left: 1rem;
     border-radius: 20px;
+}
+
+
+#press{
+    width: 20rem;
+    text-align: center;
+    font-size: .6em;
+    margin-top: 7rem;
+    color: white;
+    border: 3px solid orange;
+    border-radius: 1rem;
+    padding: .4rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 p:nth-of-type(2n) {

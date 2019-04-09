@@ -23,4 +23,7 @@ Voor de derde versie ben ik nog verder gegaan in het eigen maken van de code. Ik
 
 inspiratiebron: https://mathiasbynens.be/notes/html5-details-jquery#comment-35
 
+
+Voor de vierde versie ben ik het geheel gaan stylen en heb ik het responsive gemaakt. Hierdoor werkt de code op mobiel en laptop. 
+
 [Zie vierde versie](https://veldte.github.io/frontendvoordesigners/opdracht3/XMLHttpv4/)
